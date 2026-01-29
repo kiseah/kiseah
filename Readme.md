@@ -1,23 +1,25 @@
 <h1 align="center">Hi 👋, I'm Kiseah Casey Saturinas</h1>
+<h3 align="center">Aspiring Web Developer | Tech Enthusiast</h3>
 <h3 align="center">A passionate frontend developer from Philippines</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=kiseah&label=Profile%20views&color=0e75b6&style=flat" alt="kiseah" /> </p>
-
-<p>
-        🎓 BS Information Technology Student at University of Mindanao <br>
-        💻 Aspiring Web Developer | Tech Enthusiast <br>
-        📍 Philippines
+<p align="center">
+ <img src="https://komarev.com/ghpvc/?username=kiseah&label=Profile%20Views&color=b40e0e&style=flat-square" alt="Profile views" />
+ <img src="https://img.shields.io/github/followers/kiseah?label=Followers&style=flat-square&color=b40e0e" alt="followers" />
 </p>
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-    <a href="mailto:your@email.com">
-        <button>Email Me</button>
-    </a>
-</p>
+---
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> 
+<h3 align="center">About Me</h3>
+
+- 🎓 Currently studying **BS Information Technology** at **University of Mindanao**
+- 🌱 Learning **HTML, CSS, and Bootstrap**
+- 📫 Reach me at: **k.saturinas.553797@umindanao.edu.ph**
+- ⚡ Fun fact: **When I'm not coding, you'll probably find me reading books and exploring new ideas.**
+
+---
+
+<h3 align="center">Languages and Tools:</h3>
+<p align="center"> 
     <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> 
         <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40"/> 
     </a> 
@@ -40,6 +42,18 @@
         <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> 
     </a> 
 </p>
+
+---
+
+<h3 align="center">Contact Me</h3>
+
+<p align="center">
+ <a href="mailto:k.saturinas.553797@umindanao.edu.ph">
+  <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+ </a>
+</p>
+
+---
 
 <footer align="center">
     <hr>
