@@ -53,8 +53,6 @@
  </a>
 </p>
 
----
-
 <footer align="center">
     <hr>
     <p>© 2026 Kiseah Casey Saturinas | Thank you for visiting my Github profile!</p>
