@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aldrin Congcan | Portfolio</title>
+
+  <link rel="icon" type="image/png" href="badge.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+<style>
+  
+  #intro-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85); 
+    backdrop-filter: blur(10px);      
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    color: white;
+    flex-direction: column;
+    text-align: center;
+  }
+
+
+  #intro-screen button {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    background-color: #ffffff22; 
+    color: white;
+    border: 1px solid white;
+    transition: all 0.3s ease;
+  }
+
+  #intro-screen button:hover {
+    background-color: #ffffff44;
+    color: #ffffff;
+    transform: scale(1.05);
+  }
+
+    #snow-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; 
+  }
+
+    .hobby-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+  }
+
+  .hobby-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  }
+
+  .hobby-card i {
+    font-size: 3rem;
+  }
+
+
+</style>
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navMenu" data-bs-offset="70" tabindex="0">
+
+
+<div id="intro-screen">
+   <canvas id="snow-canvas"></canvas>
+  <button class="btn btn-light btn-lg" onclick="openPortfolio()">
+    Click to Open Portfolio
+  </button>
+</div>
+
+
+<div id="main-portfolio" style="display: none;">
+
+
+  <nav class="navbar navbar-expand-md navbar-dark bg-body-secondary fixed-top shadow" id="navMenu">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">ALDRIN</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+
+        <button id="themeToggle" class="btn btn-outline-secondary ms-3" type="button">
+          <i class="bi bi-moon-fill"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+ 
+  <section id="home" class="vh-100 bg-body text-body d-flex align-items-center justify-content-center">
+    <div class="text-center">
+      <h1 class="display-4 fw-bold"><span id="typed"></span></h1>
+      <p class="lead">IT Student • Beginner Web Developer</p>
+      <a href="#projects" class="btn btn-primary">View Projects</a>
+    </div>
+  </section>
+
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-5 text-center d-flex justify-content-center">
+          <div class="card bg-dark bg-opacity-25 shadow-lg rounded-4 p-3" style="backdrop-filter: blur(10px);">
+            <img src="pic.png" alt="Aldrin Jay Congcan" class="img-fluid rounded-3" />
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <h2 class="fw-bold mb-3">About Me</h2>
+          <p class="text-muted">
+            I am an Information Technology student with a strong interest in web development and a passion for creating meaningful digital experiences.
+          </p>
+          <p class="text-muted">
+            I specialize in front-end technologies such as HTML, CSS, Bootstrap, and JavaScript.
+          </p>
+          <p class="text-muted">
+            I am committed to continuous learning and professional growth, with strong attention to detail and problem-solving mindset.
+          </p>
+          <a href="https://congcan.netlify.app/" target="_blank" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="bg-body-tertiary py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4">My Skills</h2>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-2 col-sm-4 col-6">
+          <div class="bg-warning text-white rounded p-3">
+            <i class="bi bi-filetype-html fs-1"></i>
+            <h5 class="mt-2">HTML</h5>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6">
+          <div class="bg-primary text-white rounded p-3">
+            <i class="bi bi-filetype-css fs-1"></i>
+            <h5 class="mt-2">CSS</h5>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6">
+          <div class="bg-secondary text-white rounded p-3">
+            <i class="bi bi-bootstrap fs-1"></i>
+            <h5 class="mt-2">Bootstrap</h5>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6">
+          <div class="bg-success text-white rounded p-3">
+            <i class="bi bi-filetype-js fs-1"></i>
+            <h5 class="mt-2">JavaScript</h5>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6">
+          <div class="bg-info text-white rounded p-3">
+            <i class="bi bi-database fs-1"></i>
+            <h5 class="mt-2">SQL</h5>
+          </div>
+        </div>
+        <div class="col-md-2 col-sm-4 col-6">
+          <div class="bg-dark text-white rounded p-3">
+            <i class="bi bi-filetype-py fs-1"></i>
+            <h5 class="mt-2">Python</h5>
+          </div>
+        </div>
+          <div class="col-md-2 col-sm-4 col-6">
+            <div class="bg-danger text-white rounded p-3">
+              <i class="bi bi-figma fs-1"></i>
+              <h5 class="mt-2">Figma</h5>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- HOBBIES -->
+<section id="hobbies" class="py-5 bg-body-tertiary">
+  <div class="container text-center">
+    <h2 class="fw-bold mb-5">My Hobbies</h2>
+
+    <div class="row justify-content-center g-4">
+      <!-- Basketball -->
+      <div class="col-md-3 col-sm-6 col-8">
+        <div class="card shadow-lg rounded-4 p-4 hobby-card border-0">
+          <div class="card-body d-flex flex-column align-items-center">
+            <i class="bi bi-basket2-fill fs-1 text-warning mb-3"></i>
+            <h5 class="card-title fw-bold">Basketball</h5>
+            <p class="text-muted mt-2">I enjoy playing basketball to stay active and have fun with friends.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Taekwondo -->
+      <div class="col-md-3 col-sm-6 col-8">
+        <div class="card shadow-lg rounded-4 p-4 hobby-card border-0">
+          <div class="card-body d-flex flex-column align-items-center">
+            <i class="bi bi-person-fill fs-1 text-danger mb-3"></i>
+            <h5 class="card-title fw-bold">Taekwondo</h5>
+            <p class="text-muted mt-2">Practicing Taekwondo helps me build discipline, focus, and fitness.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- EDUCATION -->
+  <section id="education" class="py-5 bg-body-tertiary">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-4">Education</h2>
+      <div class="row justify-content-center align-items-center g-4">
+        <div class="col-md-2 text-center">
+          <div class="card shadow">
+            <img src="school.png" alt="Catalunan Pequeño National High School" class="img-fluid rounded" />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card shadow h-100">
+            <div class="card-body">
+              <h5 class="fw-bold">Senior High School</h5>
+              <p class="mb-1">Catalunan Pequeño National High School</p>
+              <p class="text-muted mb-2">Humanities and Social Sciences (HUMSS)</p>
+              <p class="text-muted mb-0">2021 – 2023</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="projects" class="py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-4">Projects</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card shadow h-100">
+            <iframe src="https://777choi.netlify.app/" class="w-100" style="height:250px; border:0" loading="lazy"></iframe>
+            <div class="card-body">
+              <h5 class="card-title">Project One</h5>
+              <p class="card-text">Responsive website using HTML & CSS.</p>
+              <a href="https://777choi.netlify.app/" target="_blank" class="btn btn-primary btn-sm">View</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow h-100">
+            <iframe src="https://hanaki.netlify.app/" class="w-100" style="height:250px; border:0" loading="lazy"></iframe>
+            <div class="card-body">
+              <h5 class="card-title">Project Two</h5>
+              <p class="card-text">Responsive website using HTML & CSS.</p>
+              <a href="https://hanaki.netlify.app/" target="_blank" class="btn btn-primary btn-sm">View</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card shadow h-100">
+            <iframe src="https://congcan.netlify.app/" class="w-100" style="height:250px; border:0" loading="lazy"></iframe>
+            <div class="card-body">
+              <h5 class="card-title">Project Three</h5>
+              <p class="card-text">Personal portfolio website.</p>
+              <a href="https://congcan.netlify.app/" target="_blank" class="btn btn-primary btn-sm">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="contact" class="bg-body-secondary py-5">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-3">Contact Me</h2>
+      <p><i class="bi bi-envelope"></i> ajkid.business@gmail.com</p>
+      <p><i class="bi bi-phone"></i> +63 963 941 1308</p>
+      <p>
+        <i class="bi bi-github"></i>
+        <a href="https://github.com/aldrinjaycongcan" target="_blank" class="text-decoration-none">
+          github.com/aldrinjaycongcan
+        </a>
+      </p>
+      <p><i class="bi bi-discord"></i> @defnotchoi_</p>
+    </div>
+  </section>
+
+  <footer class="bg-dark-secondary text-center py-3">
+    <p class="mb-0">© 2026 All Rights Reserved @Aldrin Jay Congcan</p>
+  </footer>
+
+</div> 
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<script>
+
+  new Typed('#typed', {
+    strings: ["Hi, I'm Aldrin Jay Congcan"],
+    typeSpeed: 100,
+    backSpeed: 50,
+    loop: true,
+    cursorChar: '|'
+  });
+
+  const toggleBtn = document.getElementById("themeToggle");
+  const icon = toggleBtn.querySelector("i");
+  const html = document.documentElement;
+  toggleBtn.addEventListener("click", () => {
+    const current = html.getAttribute("data-bs-theme");
+    const next = current === "dark" ? "light" : "dark";
+    html.setAttribute("data-bs-theme", next);
+    icon.className = next === "dark" ? "bi bi-sun-fill" : "bi bi-moon-fill";
+  });
+
+  function openPortfolio() {
+    document.getElementById("intro-screen").style.display = "none";
+    document.getElementById("main-portfolio").style.display = "block";
+  }
+
+    const canvas = document.getElementById("snow-canvas");
+  const ctx = canvas.getContext("2d");
+
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+
+  class Snowflake {
+    constructor() {
+      this.reset();
+    }
+    reset() {
+      this.x = Math.random() * canvas.width;
+      this.y = Math.random() * -canvas.height;
+      this.radius = Math.random() * 3 + 1;
+      this.speed = Math.random() * 1 + 0.5;
+      this.wind = Math.random() * 0.5 - 0.25;
+    }
+    update() {
+      this.y += this.speed;
+      this.x += this.wind;
+      if (this.y > canvas.height) this.reset();
+      if (this.x > canvas.width) this.x = 0;
+      if (this.x < 0) this.x = canvas.width;
+    }
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+      ctx.fillStyle = "white";
+      ctx.fill();
+    }
+  }
+
+  const snowflakes = [];
+  const SNOWFLAKE_COUNT = 100;
+  for (let i = 0; i < SNOWFLAKE_COUNT; i++) {
+    snowflakes.push(new Snowflake());
+  }
+
+  function animateSnow() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    snowflakes.forEach(flake => {
+      flake.update();
+      flake.draw();
+    });
+    requestAnimationFrame(animateSnow);
+  }
+
+  animateSnow();
+
+</script>
+
+</body>
+</html>
